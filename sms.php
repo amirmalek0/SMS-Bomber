@@ -3,6 +3,7 @@ if (isset($_POST['phone'])) {
     if (preg_match("/^([0][9][0-9]{9})$/", $_POST['phone'])) {
         $phone = $_POST['phone'];
         all($phone);
+        header("Location:index.php?ok=true");
     } else {
         header("Location:index.php?number=0");
     }

@@ -86,3 +86,35 @@ body {
     text-align: center;
     border-radius: 0.4rem;
 }
+.pending {
+    display: none;
+    margin:auto;
+    background-color: #03A9F4;
+    color: #fff;
+    padding: 0.5rem 2rem;
+    width: fit-content;
+    text-align: center;
+    border-radius: 0.4rem;
+    animation: bounce 1s infinite;
+}
+.done {
+    display: block;
+    margin:auto;
+    background-color: #43A047;
+    color: #fff;
+    padding: 0.5rem 2rem;
+    width: fit-content;
+    text-align: center;
+    border-radius: 0.4rem;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(-25%);
+        animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+    50% {
+        transform: translateY(0);
+        animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+}
