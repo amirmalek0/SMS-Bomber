@@ -76,3 +76,13 @@ body {
 .git{
     width: 20%;
 }
+.error {
+    display: block;
+    margin:auto;
+    background-color: #F44336;
+    color: #fff;
+    padding: 0.5rem 2rem;
+    width: fit-content;
+    text-align: center;
+    border-radius: 0.4rem;
+}

@@ -1,5 +1,12 @@
 <?php
-
+if (isset($_POST['phone'])) {
+    if (preg_match("/^([0][9][0-9]{9})$/", $_POST['phone'])) {
+        $phone = $_POST['phone'];
+        all($phone);
+    } else {
+        header("Location:index.php?number=0");
+    }
+}
 function all($phone)
 {
     divar($phone);  //ok

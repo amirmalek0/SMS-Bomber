@@ -12,6 +12,10 @@
 </head>
 <body>
 <form action="sms.php" class="bomber-form" method="POST">
+    <?php
+    if (isset($_GET['number']) && $_GET['number'] == 0) { ?>
+        <div class="error">!فرمت شماره وارد شده اشتباه می باشد</div>
+    <?php } ?>
     <h3>اس ام اس بمبر 💣</h3>
     <label for="phone">شماره تلفن(با صفر)</label>
     <input id="phone" name="phone" placeholder="09XXXXXXXXX" type="text">
