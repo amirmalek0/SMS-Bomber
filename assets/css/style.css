@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    font-family: Vazirmatn, sans-serif;
+}
+
+body {
+    background-color: #08AEEA;
+    background-image: linear-gradient(0deg, #08AEEA 0%, #2AF598 100%);
+}
+
+.bomber-form {
+    background-color: #fff;
+    width: 40%;
+    display: block;
+    margin: auto;
+    position: relative;
+    top: 20%;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    transition: 1s;
+}
+@media only screen and (max-width: 1200px) {
+    .bomber-form {
+        width: 80%;
+    }
+}
+
+.bomber-form:hover {
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    transition: 1s;
+}
+
+.bomber-form h3 {
+    text-align: center;
+    font-weight: 900;
+    font-size: 26px
+}
+
+.bomber-form label {
+    text-align: right;
+    display: block;
+}
+
+.bomber-form input {
+    width: 100%;
+    border-radius: 0.5rem;
+    display: block;
+    outline: none;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    transition: 0.5s;
+    margin-bottom: 0.6rem;
+}
+
+.bomber-form input:focus {
+    border: 1px solid #454949;
+    transition: 0.5s;
+}
+
+.bomber-form button {
+    width: 100%;
+    background-color: #FF3CAC;
+    background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+    outline: none;
+    border: none;
+    border-radius: 0.2rem;
+    padding: 0.5rem;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.git{
+    width: 20%;
+}
