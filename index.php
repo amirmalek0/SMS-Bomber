@@ -24,9 +24,12 @@
     <h3>اس ام اس بمبر 💣</h3>
     <label for="phone">شماره تلفن(با صفر)</label>
     <input id="phone" name="phone" placeholder="09XXXXXXXXX" type="text">
-    <button onclick="sending()" name="submit">ارسال</button>
+    <button onclick="sending();scrollToBottom()" name="submit">ارسال</button>
     <a href="https://github.com/amirmalek0" target="_blank"><img alt="AmirMalek-Github" class="git"
                                                                  src="assets/img/github.png"></a>
+    <label for="logText">لاگ ارسال</label>
+    <textarea id="logText" rows="7" cols="30" readonly></textarea>
+
 </form>
 <script>
     function sending() {
@@ -46,6 +49,22 @@
 
         document.getElementById("pending").style.display = "block";
     }
+
+    function readLogFile() {
+        fetch('log.txt')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('logText').value = data;
+            });
+    }
+    const textarea = document.getElementById('logText');
+    function scrollToBottom() {
+        textarea.scrollTop = textarea.scrollHeight;
+    }
+
+    readLogFile();
+    setInterval(readLogFile, 1000);
+
 </script>
 </body>
 </html>
