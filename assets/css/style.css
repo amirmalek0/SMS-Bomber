@@ -15,7 +15,7 @@ body {
     display: block;
     margin: auto;
     position: relative;
-    top: 20%;
+    top: 0;
     padding: 1rem 2rem;
     border-radius: 1rem;
     box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
@@ -43,7 +43,7 @@ body {
     display: block;
 }
 
-.bomber-form input {
+.bomber-form input,textarea {
     width: 100%;
     border-radius: 0.5rem;
     display: block;
@@ -53,7 +53,16 @@ body {
     transition: 0.5s;
     margin-bottom: 0.6rem;
 }
+textarea {
+    resize: none;
+}
+textarea::-webkit-scrollbar {
+    width: 0.3em;
+}
 
+textarea::-webkit-scrollbar-thumb {
+    background-color: black;
+}
 .bomber-form input:focus {
     border: 1px solid #454949;
     transition: 0.5s;
