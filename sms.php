@@ -55,7 +55,7 @@ function generateRandomString($length = 10)
     return $randomString;
 }
 
-function CURL_SMS($URL, $PHONE_VALUE, $HEADER1 = NULL, $HEADER2 = NULL,)
+function CURL_SMS($URL, $PHONE_VALUE, $HEADER1 = NULL, $HEADER2 = NULL): void
 {
     global $response;
     date_default_timezone_set("Asia/Tehran");
